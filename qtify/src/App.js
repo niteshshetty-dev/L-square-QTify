@@ -10,6 +10,7 @@ function App() {
         <Navbar />
         <Hero />
         <Section title="Top Albums" apiEndpoint="/top" />
+        <Section title="New Albums" apiEndpoint="/new" />
       </BrowserRouter>
     </div>
   );
