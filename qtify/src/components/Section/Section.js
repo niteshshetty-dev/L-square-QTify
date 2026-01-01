@@ -22,7 +22,7 @@ function Section({ title, apiEndpoint }) {
     fectchAlumns();
   }, [apiEndpoint]);
 
-  const visibleAlbums = collapsed ? albums.slice(0, 7) : albums;
+  //   const visibleAlbums = collapsed ? albums.slice(0, 7) : albums;
 
   return (
     <section className={styles.section}>
@@ -49,8 +49,15 @@ function Section({ title, apiEndpoint }) {
         </Button>
       </Grid>
 
-      <Grid container spacing={3}>
-        {visibleAlbums.map((album) => (
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          maxHeight: collapsed ? 250 : "none",
+          overflow: "hidden",
+        }}
+      >
+        {albums.map((album) => (
           <Grid item key={album.id} xs={6} sm={4} md={2}>
             <AlbumCard album={album} />
           </Grid>
