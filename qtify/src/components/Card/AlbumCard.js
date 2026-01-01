@@ -8,7 +8,6 @@ import { Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 
 export default function Albumcard({ album }) {
-  console.log(album);
   return (
     <>
       <Card sx={{ width: 180, height: 250 }} key={album.id}>
