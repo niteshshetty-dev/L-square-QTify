@@ -113,8 +113,6 @@ export default function Section({ title, apiEndpoint, type }) {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [collapsed, setCollapsed] = useState(true);
 
-  console.log(genres);
-
   const config = {
     endpoint: "https://qtify-backend.labs.crio.do",
   };
@@ -124,7 +122,6 @@ export default function Section({ title, apiEndpoint, type }) {
       if (type === "songs") {
         try {
           const res = await axios.get(`${config.endpoint}/genres`);
-          console.log(res.data);
           setGenres([{ key: "all", label: "All" }, ...res["data"].data]);
         } catch (err) {
           console.log(err);
