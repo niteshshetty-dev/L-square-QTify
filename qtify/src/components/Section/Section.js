@@ -22,7 +22,7 @@ function Section({ title, apiEndpoint }) {
     fectchAlumns();
   }, [apiEndpoint]);
 
-  const visibleAlbums = collapsed ? albums.slice(0, 7) : albums;
+  const visibleAlbums = collapsed ? albums : albums.slice(0, 7);
 
   return (
     <section className={styles.section}>
@@ -45,7 +45,7 @@ function Section({ title, apiEndpoint }) {
             color: "var(--color-primary)",
           }}
         >
-          {collapsed ? "Show All" : "Collapse"}
+          {collapsed ? "Collapse" : "Show All"}
         </Button>
       </Grid>
 

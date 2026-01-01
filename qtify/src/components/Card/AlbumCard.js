@@ -4,11 +4,14 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
 import Chip from "@mui/material/Chip";
 import "./AlbumCard.css";
+import { Typography } from "@mui/material";
+import CardContent from "@mui/material/CardContent";
 
 export default function Albumcard({ album }) {
+  console.log(album);
   return (
     <>
-      <Card sx={{ width: 180, height: 210 }} key={album.id}>
+      <Card sx={{ width: 180, height: 250 }} key={album.id}>
         <CardActionArea sx={{ height: 170 }}>
           <CardMedia
             component="img"
@@ -35,6 +38,23 @@ export default function Albumcard({ album }) {
             classes={{ label: "chipLabel" }}
           />
         </CardActions>
+        <CardContent
+          sx={{
+            paddingTop: 1,
+            backgroundColor: "var(--color-black)",
+            display: "flex",
+            justifyContent: "start",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            variant="body2"
+            sx={{ color: "var(--color-white)" }}
+            noWrap
+          >
+            {album.title}
+          </Typography>
+        </CardContent>
       </Card>
     </>
   );
