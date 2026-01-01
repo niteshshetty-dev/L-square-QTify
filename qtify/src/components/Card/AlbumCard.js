@@ -7,7 +7,7 @@ import "./AlbumCard.css";
 import { Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 
-export default function Albumcard({ album }) {
+export default function Albumcard({ album, type }) {
   return (
     <>
       <Card sx={{ width: 180, height: 250 }} key={album.id}>
@@ -26,8 +26,23 @@ export default function Albumcard({ album }) {
             alignItems: "center",
           }}
         >
-          <Chip
+          {/* <Chip
             label={`${album.follows} follows`}
+            variant="outlined"
+            sx={{
+              width: 90,
+              height: 25,
+              backgroundColor: "var(--color-black)",
+            }}
+            classes={{ label: "chipLabel" }}
+          /> */}
+
+          <Chip
+            label={
+              type === "songs"
+                ? `${album.likes} likes`
+                : `${album.follows} follows`
+            }
             variant="outlined"
             sx={{
               width: 90,

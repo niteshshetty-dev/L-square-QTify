@@ -9,8 +9,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Hero />
-        <Section title="Top Albums" apiEndpoint="/top" />
-        <Section title="New Albums" apiEndpoint="/new" />
+        <Section title="Top Albums" apiEndpoint="albums/top" type="albums" />
+        <Section title="New Albums" apiEndpoint="albums/new" type="albums" />
+        <Section title="Songs" apiEndpoint="songs" type="songs" />
       </BrowserRouter>
     </div>
   );
