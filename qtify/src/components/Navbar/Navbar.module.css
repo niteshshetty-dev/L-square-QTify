@@ -1,0 +1,26 @@
+.navbar {
+  background-color: var(--color-primary);
+  height: 74px;
+  padding-right: 16px;
+  padding-left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedbackButton {
+  padding: 10px 16px;
+  gap: 10px;
+
+  border-radius: 12px;
+
+  background-color: var(--color-black);
+  color: var(--color-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+  cursor: pointer;
+}
