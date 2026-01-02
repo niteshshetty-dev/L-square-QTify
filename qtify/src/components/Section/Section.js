@@ -184,13 +184,13 @@ export default function Section({ title, apiEndpoint, type }) {
             sx={{
               mt: 1,
               "& .MuiTab-root": {
-                color: "#aaa",
+                color: "var(--color-white)",
                 textTransform: "none",
                 fontWeight: 500,
                 minWidth: "auto",
                 padding: "6px 12px",
               },
-              "& .Mui-selected": {
+              "& .MuiTab-root.Mui-selected": {
                 color: "var(--color-primary)",
               },
               "& .MuiTabs-indicator": {
